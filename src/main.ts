@@ -11,4 +11,12 @@ console.log("Book Management Application - Week 6");
 console.log("=====================================");
 
 // Mulai pengujian di bawah ini
+import { addBook } from './functions/bookManager';
+import { listBook } from './functions/bookManager';
+import { searchBook } from './functions/bookManager';
 
+addBook({ title: "Harry Potter", author: " J.K Roling", publicationYear: 1997 });
+addBook({ title: "Laskar Pelangi", author: "Andre Hirata", PublicationYear: 2005 });
+
+listBook();
+searchBook("Harry Potter")
