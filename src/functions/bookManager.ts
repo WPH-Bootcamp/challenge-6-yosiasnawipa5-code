@@ -21,3 +21,22 @@
 // Petunjuk: jika parameter title diberikan, cari buku yang cocok
 //           jika tidak diberikan, tampilkan semua buku atau berikan informasi yang sesuai
 
+import { Book } from '../types';
+import { books } from '../data/books';
+
+export function addBook(book: Book) : void {
+  books.push(book);
+}
+
+export function listBooks(): void {
+  console.log(books);
+}
+
+export function searchBook(title?: string): void {
+  if (title) {
+    const result = books.filter(book => book.title === title);
+    console.log(result);
+  } else {
+    console.log(books);
+  }
+}
